@@ -5,15 +5,19 @@ namespace App\Models;
 use CodeIgniter\Database\Query;
 use CodeIgniter\Model;
 
+
 class MPenjualan extends Model
 {
+
+
+
     public function NoFaktur(){
         $tgl = date('Ymd');
         $query = $this->db->query("SELECT MAX(RIGHT(no_faktur,4)) AS no_urut FROM tbl_penjualan WHERE DATE(tgl_penjualan)='$tgl'");
         $hasil = $query->getRowArray();
         if ($hasil['no_urut'] > 0){
             $tmp = $hasil['no_urut'] + 1;
-            $kd = printf("%04s", $tmp);
+            $kd = sprintf("%04s", $tmp);
         } else {
             $kd = "0001";
         }

@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\MProduk;
 use App\Models\MKategori;
+use \Dompdf\Dompdf;
 
 class Produk extends BaseController
 {
@@ -30,6 +31,7 @@ class Produk extends BaseController
             'kategori' => $this->MKategori->AllData(),
 
         ];
+        
         return view('template', $data);
     }
 
@@ -92,6 +94,33 @@ class Produk extends BaseController
         $this->MProduk->HapusData($data);
         session()->setFlashdata('pesan', 'Data Berhasil Dihapus!');
         return redirect()->to(base_url('produk'));
+    }
+
+    public function printpdf()
+    {
+
+        $hargabeli = $this->request->getPost('harga_beli');
+        $hargajual = $this->request->getPost('harga_jual');
+        $dompdf = new Dompdf();
+        $data = [
+                'kode_produk' => $this->request->getPost('kode_produk'),
+                'nama_produk' => $this->request->getPost('nama_produk'),
+                'harga_beli' => $hargabeli,
+                'harga_jual' => $hargajual,
+                'satuan' => $this->request->getPost('satuan'),
+                'id_kategori' => $this->request->getPost('id_kategori'),
+                'stok' => $this->request->getPost('stok'),
+            ];
+        
+        $data['tbl_produk'] = $produk;
+        $html = view('produk', $data);
+        $dompdf->loadhtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+        $dompdf->stream();
+        $dompdf->stream('data produk.pdf',array(
+            "Attachment" => false
+        ));
     }
 
 }

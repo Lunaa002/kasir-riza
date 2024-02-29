@@ -7,6 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\MProduk;
 use App\Models\MKategori;
 
+
 class Laporan extends BaseController
 {
     public function __construct()
@@ -16,8 +17,11 @@ class Laporan extends BaseController
     }
 
 
+
+
     public function PrintDataProduk()
     {
+        
         $data = [
 
             'judul' => 'Laporan Produk',

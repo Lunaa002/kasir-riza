@@ -227,7 +227,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('Admin/Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
+                            <a href="<?= base_url('Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
                                     Laporan

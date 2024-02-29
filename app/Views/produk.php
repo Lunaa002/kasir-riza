@@ -3,14 +3,22 @@
         <div class="card-header">
             <h3 class="card-title"><?= $subjudul ?></h3>
             <div class="card-tools">
-                <button type="button" class="btn btn-tool" ><i class="fas fa-print"> Print</i>
+                <button type="button" name="print PDF" class="btn btn-tool" onclick="window.open('<?php echo site_url('produk/printpdf')?>','blank')"><i class="fas fa-print"> Print</i>
                     </button>
                 <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#tambah"><i class="fas fa-plus"> Tambah</i>
                     </button>
             </div>
 
         </div>
-
+        <?php
+               $pdf = false;
+               if(strpos(current_url(),"printpdf")) {
+                $pdf = true;
+               }
+               if($pdf == false){
+              
+               }
+               ?> 
         <div class="card-body">
             <?php
             if (session()->getFlashData('pesan')) {

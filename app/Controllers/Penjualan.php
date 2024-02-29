@@ -96,13 +96,15 @@ class Penjualan extends BaseController
                 'kode_produk' => $value['id'],
                 'harga_jual' => $value['price'],
                 'qty' => $value['qty'],
+                'total_harga' => $value['subtotal'],
                 
             ];
             $this->MPenjualan->InsertDetailPenjualan($data);
         }
         $data = [
             'no_faktur' => $no_faktur,
-            'tgl_jual' => date('d F Y, h:i:s A'),
+            'tgl_penjualan' => date('Ymd'),
+            'jam' => date(' h:i:s A'),
             'total_harga' => $cart->total(),
             'cash' => $cash,
             'kembalian' => $kembalian,

@@ -3,7 +3,7 @@
 
         <div class="small-box bg-info">
             <div class="inner">
-                <h3>150</h3>
+                <h3>4</h3>
                 <p>Produk</p>
             </div>
             <div class="icon">
@@ -17,7 +17,7 @@
 
         <div class="small-box bg-success">
             <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <h3>6</sup></h3>
                 <p>Kategori</p>
             </div>
             <div class="icon">
@@ -31,7 +31,7 @@
 
         <div class="small-box bg-warning">
             <div class="inner">
-                <h3>44</h3>
+                <h3>2</h3>
                 <p>User</p>
             </div>
             <div class="icon">

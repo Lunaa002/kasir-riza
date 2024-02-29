@@ -159,7 +159,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <input name="satuan" class="form-control" placeholder="Satuan" readonly>
                                             </div>
                                             <div class="col-2">
-                                                <input name="harga_jual" class="form-control" placeholder="Harga">
+                                                <input name="harga_jual" class="form-control" placeholder="Harga" readonly>
                                             </div>
                                             <div class="col-1">
                                                 <input id="qty" type="number" min="1" value="1" name="qty" class="form-control" placeholder="Qty">
@@ -307,7 +307,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <div class="modal-body">
 
-                    <?php echo form_open() ?>
+                    <?php echo form_open('Penjualan/SimpanTransaksi') ?>
 
                     <div class="form-group">
                         <label for="">Subtotal</label>
@@ -325,7 +325,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Rp.</span>
                             </div>
-                            <input name="cash" id="cash" class="form-control form-control-lg text-right text-success" autocomplete="off">
+                            <input name="cash" id="cash" class="form-control form-control-lg text-right text-success" autocomplete="off" required>
                         </div>
                     </div>
 
@@ -335,7 +335,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Rp.</span>
                             </div>
-                            <input name="kembalian" id="kembali" class="form-control form-control-lg text-right text-primary" readonly>
+                            <input name="kembalian" id="kembalian" class="form-control form-control-lg text-right text-primary" readonly>
                         </div>
                     </div>
 
@@ -420,9 +420,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 let cash = $('#cash').val().replace(/[^,\d]/g, '').toString();
 
                 let kembalian = parseFloat(cash) - parseFloat(totalharga);
-                $('#kembali').val(kembalian)
+                $('#kembalian').val(kembalian)
 
-                new AutoNumeric('#kembali', {
+                new AutoNumeric('#kembalian', {
                     digitGroupSeparator: ',',
                     decimalPlaces: 0,
                 });
