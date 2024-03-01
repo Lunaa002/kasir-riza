@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -269,7 +270,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <th>No</th>
                                 <th>Kode Produk</th>
                                 <th>Nama Produk</th>
-                                <th>Harga Jual</th>
+                                <th>Harga</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -420,7 +421,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 let cash = $('#cash').val().replace(/[^,\d]/g, '').toString();
 
                 let kembalian = parseFloat(cash) - parseFloat(totalharga);
-                $('#kembalian').val(kembalian)
+                $('#kembalian').val(kembalian);
 
                 new AutoNumeric('#kembalian', {
                     digitGroupSeparator: ',',

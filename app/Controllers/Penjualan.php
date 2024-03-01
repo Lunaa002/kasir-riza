@@ -94,7 +94,7 @@ class Penjualan extends BaseController
             $data = [
                 'no_faktur' => $no_faktur,
                 'kode_produk' => $value['id'],
-                'harga_jual' => $value['price'],
+                'harga' => $value['price'],
                 'qty' => $value['qty'],
                 'total_harga' => $value['subtotal'],
                 
@@ -104,7 +104,7 @@ class Penjualan extends BaseController
         $data = [
             'no_faktur' => $no_faktur,
             'tgl_penjualan' => date('Ymd'),
-            'jam' => date(' h:i:s A'),
+            'jam' => date(' h:i:s '),
             'total_harga' => $cart->total(),
             'cash' => $cash,
             'kembalian' => $kembalian,

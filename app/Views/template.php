@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="<?= base_url('AdminLTE') ?>/dist/css/adminlte.min.css?v=3.2.0">
 
-    
+
     <script nonce="5d8e3939-b4d3-4997-8bec-d5208cd7ac4f">
         try {
             (function(w, d) {
@@ -88,8 +88,8 @@
     </script>
 
 
-     <script src="<?= base_url('AdminLTE') ?>/plugins/datatables/jquery.dataTables.min.js"></script>
-     <script src="<?= base_url('AdminLTE') ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('AdminLTE') ?>/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url('AdminLTE') ?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="<?= base_url('AdminLTE') ?>/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?= base_url('AdminLTE') ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -104,12 +104,12 @@
     <script src="<?= base_url('AdminLTE') ?>/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="<?= base_url('AdminLTE') ?>/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-     <script src="<?= base_url('AdminLTE') ?>/plugins/chart.js/Chart.min.js"></script>
-     <script src="<?= base_url('AdminLTE') ?>/dist/js/adminlte.min.js"></script>
+    <script src="<?= base_url('AdminLTE') ?>/plugins/chart.js/Chart.min.js"></script>
+    <script src="<?= base_url('AdminLTE') ?>/dist/js/adminlte.min.js"></script>
 
-     <script src="<?= base_url('autoNumeric') ?>/src/AutoNumeric.js"></script>
+    <script src="<?= base_url('autoNumeric') ?>/src/AutoNumeric.js"></script>
 
-     
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -120,7 +120,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>              
+                </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">
@@ -151,7 +151,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"   href="<?= base_url('Home/LogOut')?>" >
+                    <a class="nav-link" href="<?= base_url('Home/LogOut') ?>">
                         <i class="fas fa-sign-out-alt"></i>Logout
                     </a>
                 </li>
@@ -169,9 +169,9 @@
             <div class="sidebar">
 
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                  
+
                     <div class="info">
-                        <a href="#" class="d-block"><?= session()->get('nama')?></a>
+                        <a href="#" class="d-block"><?= session()->get('nama') ?></a>
                     </div>
                 </div>
 
@@ -189,7 +189,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?= base_url('Penjualan') ?>" class="nav-link" >
+                            <a href="<?= base_url('Penjualan') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-cash-register"></i>
                                 <p>
                                     Penjualan
@@ -228,7 +228,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?= base_url('Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
-                                <i class="nav-icon fas fa-file"></i>
+                                <i class="fas fa-file"></i>
                                 <p>
                                     Laporan
                                 </p>
